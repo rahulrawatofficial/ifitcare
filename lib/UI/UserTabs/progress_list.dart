@@ -28,7 +28,11 @@ class _ProgressListState extends State<ProgressList> {
                   height: 350,
                     color: Colors.transparent,
       child: ListView(children: [
-        Card(
+        GestureDetector(
+          onTap: (){
+            Navigator.pushNamed(context, 'todayWorkout');
+          },
+          child: Card(
 child: Padding(
   padding: const EdgeInsets.all(20.0),
   child:   Row(
@@ -40,24 +44,35 @@ child: Padding(
   ],),
 )
 
+          ),
         ),
 
-Card(
-child: Padding(
-  padding: const EdgeInsets.all(20.0),
-  child:   Row(
-    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-    children:const [
-  Text("Daily Water Intake",style: TextStyle(fontWeight: FontWeight.bold),),
-  Text("3 / 10",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.lightBlue),),
+GestureDetector(
+  onTap: (){
+      Navigator.pushNamed(context, 'waterIntake');
+    },
+  child:   Card(
+    
+  child: Padding(
+    padding: const EdgeInsets.all(20.0),
+    child:   Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children:const [
+    Text("Daily Water Intake",style: TextStyle(fontWeight: FontWeight.bold),),
+    Text("3 / 10",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.lightBlue),),
+    
+    ],),
+  )
   
-  ],),
-)
-
-        ),
+          ),
+),
 
 
-        Card(
+        GestureDetector(
+          onTap: (() {
+            Navigator.pushNamed(context, 'dailyMeal');
+          }),
+          child: Card(
 child: Padding(
   padding: const EdgeInsets.all(20.0),
   child:   Row(
@@ -69,9 +84,14 @@ child: Padding(
   ],),
 )
 
+          ),
         ),
 
-        Card(
+        GestureDetector(
+          onTap: (){
+            Navigator.pushNamed(context, 'stepsCount');
+          },
+          child: Card(
 child: Padding(
   padding: const EdgeInsets.all(20.0),
   child:   Row(
@@ -83,6 +103,7 @@ child: Padding(
   ],),
 )
 
+          ),
         ),
 
 
