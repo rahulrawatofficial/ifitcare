@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:ifitcare/UI/UserTabs/daily_meals_page.dart';
 import 'package:ifitcare/UI/UserTabs/steps_count_page.dart';
 import 'package:ifitcare/UI/UserTabs/today_workout_page.dart';
@@ -11,7 +12,9 @@ import 'package:ifitcare/UI/user_home.dart';
 import 'UI/login_page.dart';
 import 'UI/signup_page.dart';
 
-void main() {
+Future main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(
     MaterialApp(
         debugShowCheckedModeBanner: false,
