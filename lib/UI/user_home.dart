@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ifitcare/UI/UserTabs/user_profile.dart';
 
 import 'UserTabs/workout_page.dart';
 
@@ -19,10 +20,7 @@ class _UserHomeState extends State<UserHome> {
       Icons.camera,
       size: 150,
     ),
-    Icon(
-      Icons.chat,
-      size: 150,
-    ),
+    UserProfilePage()
   ];
 
   void _onItemTapped(int index) {

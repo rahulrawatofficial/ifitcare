@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class MyLogin extends StatefulWidget {
   const MyLogin({Key? key}) : super(key: key);
@@ -76,7 +77,8 @@ class _MyLoginState extends State<MyLogin> {
                       backgroundColor: const Color(0xff4c505b),
                       child: IconButton(
                         color: Colors.white,
-                        onPressed: () {
+                        onPressed: () async{
+                          // await FirebaseAuth.instance.signInWithEmailAndPassword(email: "anshuannjacob97@gmail.com", password: "Asu@123");
                           Navigator.pushNamedAndRemoveUntil(context, 'userHome', ModalRoute.withName("/"));
                         },
                         icon: const Icon(Icons.arrow_forward),
