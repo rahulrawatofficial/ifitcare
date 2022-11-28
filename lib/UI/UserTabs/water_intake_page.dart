@@ -14,14 +14,16 @@ class _WaterIntakePageState extends State<WaterIntakePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("DAILY INTAKE"),
+        title: const Text("DAILY WATER INTAKE"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-      const    Center(child:   Icon(Icons.water_drop_outlined,color: Colors.blue,size: 150,)),
+
+            Center(child: Image.asset('assets/images/water.png',height: 200,width: 200,)),
+      // const    Center(child:   Icon(Icons.water_drop_outlined,color: Colors.blue,size: 150,)),
         // const    Text("DAILY INTAKE",
               // style: TextStyle(color: Colors.black, fontSize: 33),),
           const    SizedBox(
@@ -56,7 +58,7 @@ class _WaterIntakePageState extends State<WaterIntakePage> {
            const Padding(
               padding:  EdgeInsets.all(8.0),
               child:     Text("You still need to drink 9 more glass of water to complete your daily goal of your water intake",
-                style: TextStyle(color: Colors.black, fontSize: 20,fontWeight: FontWeight.w600),),
+                style: TextStyle(color: Colors.black, fontSize: 20,fontWeight: FontWeight.w600,),),
             ),
             const    SizedBox(
                 height: 100,
