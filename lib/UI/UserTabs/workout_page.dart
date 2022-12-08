@@ -17,12 +17,13 @@ class WorkoutPage extends StatefulWidget {
 class _WorkoutPageState extends State<WorkoutPage> {
 
   late ValueNotifier<double> valueNotifier;
-  late final List<String> _items=["Water\n Reminder", "Exercise", "Cardio", "Watch Demo", "Update Goals"];
+  late final List<String> _items=["Watch Demo","Water\n Reminder", "Exercise", "Cardio",  "Update Goals"];
 final List<Icon> _itemsIcon=[
+
+ const Icon(Icons.video_library_outlined),
   const Icon(Icons.water_drop_outlined),
  const Icon(Icons.sports_gymnastics_outlined),
  const Icon(Icons.run_circle_outlined),
- const Icon(Icons.video_library_outlined),
  const Icon(Icons.update),
 ];
 
@@ -68,19 +69,21 @@ const SizedBox(
             scrollDirection: Axis.horizontal,
             itemCount: _items.length,
               itemBuilder: (context, index){
-                return Container(
-                  height: 90,
-                  width: 130,
-                    color: Colors.transparent,
-                  child: Card(
-                    
-                    child: Center(child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        _itemsIcon[index],
-                        Text(_items[index],style:const TextStyle(fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
-                      ],
-                    )),
+                return Center(
+                  child: Container(
+                    height: 90,
+                    width: 130,
+                      color: Colors.transparent,
+                    child: Card(
+                      
+                      child: Center(child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          _itemsIcon[index],
+                          Text(_items[index],style:const TextStyle(fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
+                        ],
+                      )),
+                    ),
                   ),
                 );
               },

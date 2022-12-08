@@ -11,25 +11,16 @@ class UserProfilePage extends StatefulWidget {
 }
 
 class _UserProfilePageState extends State<UserProfilePage> {
-  TextEditingController fNameController = TextEditingController();
-  TextEditingController phoneController = TextEditingController();
-  TextEditingController dobController = TextEditingController();
-  TextEditingController genderController = TextEditingController();
-  TextEditingController emailController = TextEditingController();
-  TextEditingController fatherController = TextEditingController();
-  TextEditingController fNoController = TextEditingController();
-  TextEditingController motherController = TextEditingController();
-  TextEditingController mNoController = TextEditingController();
-  TextEditingController presentAController = TextEditingController();
-  TextEditingController permanentAController = TextEditingController();
-  TextEditingController cityController = TextEditingController();
-  TextEditingController pincodeController = TextEditingController();
-  TextEditingController stateController = TextEditingController();
-  TextEditingController countryController = TextEditingController();
-  TextEditingController heightController = TextEditingController();
-  TextEditingController weightController = TextEditingController();
-  TextEditingController bloodController = TextEditingController();
-  TextEditingController medicalController = TextEditingController();
+  TextEditingController fNameController = TextEditingController(text: "Ashish");
+  TextEditingController lNameController = TextEditingController(text: "Kumar");
+  TextEditingController phoneController = TextEditingController(text: "2264939020");
+  TextEditingController dobController = TextEditingController(text: "12-25-1999");
+  TextEditingController genderController = TextEditingController(text: "Male");
+  TextEditingController emailController = TextEditingController(text: "v_ashish139992@gmail.com");
+  TextEditingController weightController = TextEditingController(text: "180lb");
+  TextEditingController heightController = TextEditingController(text: "5' 11");
+  TextEditingController addressController = TextEditingController(text: "627 Haig St. London, ON");
+  TextEditingController bloodController = TextEditingController(text: "B+");
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -57,6 +48,7 @@ class _UserProfilePageState extends State<UserProfilePage> {
                      Padding(
                        padding: EdgeInsets.all(20.0),
                        child: CircleAvatar(
+                        backgroundImage: AssetImage("assets/images/man.png"),
                           backgroundColor: Color(0xFF444B54),
                           radius: 70,
                         ),
@@ -69,14 +61,16 @@ class _UserProfilePageState extends State<UserProfilePage> {
                   child: Column(
                     children: [
                       TextFormField(
+                    
                     controller: fNameController,
                     decoration:const InputDecoration(
+                      
                       labelText: "First Name",
                       border: UnderlineInputBorder(),
                     ),
                   ),
                   TextFormField(
-                    controller: emailController,
+                    controller: lNameController,
                     decoration:const InputDecoration(
                       labelText: "Last Name",
                       border: UnderlineInputBorder(),
@@ -108,14 +102,14 @@ class _UserProfilePageState extends State<UserProfilePage> {
                   //   ],
                   // ),
                   TextFormField(
-                    controller: fatherController,
+                    controller: heightController,
                     decoration: const InputDecoration(
                       labelText: "Hieght",
                       border: UnderlineInputBorder(),
                     ),
                   ),
                   TextFormField(
-                    controller: motherController,
+                    controller: weightController,
                     decoration:const InputDecoration(
                       labelText: "Weight",
                       border: UnderlineInputBorder(),
@@ -123,7 +117,7 @@ class _UserProfilePageState extends State<UserProfilePage> {
                   ),
                   
                   TextFormField(
-                    controller: presentAController,
+                    controller: addressController,
                     decoration:const InputDecoration(
                       labelText: "Address",
                       border: UnderlineInputBorder(),

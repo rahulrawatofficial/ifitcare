@@ -10,6 +10,20 @@ class WaterIntakePage extends StatefulWidget {
 }
 
 class _WaterIntakePageState extends State<WaterIntakePage> {
+  late double waterPercentage;
+  add(){
+    setState(() {
+                waterPercentage=waterPercentage+0.1;
+                print(waterPercentage);
+              });
+  }
+
+  @override
+  void initState() {
+     waterPercentage=0.3;
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +47,7 @@ class _WaterIntakePageState extends State<WaterIntakePage> {
               child: LinearPercentIndicator(
                         // width: 350.0,
                         lineHeight: 18.0,
-                        percent: 0.3,
+                        percent: waterPercentage,
                         progressColor: Colors.green,
                       ),
             ),
@@ -44,11 +58,12 @@ class _WaterIntakePageState extends State<WaterIntakePage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const[
                 Text("0 Glass"),
-                Padding(
-                  padding: EdgeInsets.fromLTRB(0, 0, 120, 0),
-                  child: Text("3 Glass"),
-                ),
-                Text("12 Glass"),
+                // Padding(
+                //   padding: EdgeInsets.fromLTRB(0, 0, 120, 0),
+                  
+                //   child: Text(" Glass"),
+                // ),
+                Text("10 Glass"),
               ],
             ),
             const    SizedBox(
@@ -63,7 +78,7 @@ class _WaterIntakePageState extends State<WaterIntakePage> {
             const    SizedBox(
                 height: 100,
               ),
-            Center(child: CupertinoButton(child: Text("Drink and Update"),color: Colors.blue, onPressed: (){})),
+            Center(child: CupertinoButton(child: Text("Drink and Update"),color: Colors.blue, onPressed: add)),
           ],
         ),
       ),

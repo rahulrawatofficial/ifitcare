@@ -26,13 +26,13 @@ class _TodayWorkoutPageState extends State<TodayWorkoutPage> {
         // const    Text("DAILY INTAKE",
               // style: TextStyle(color: Colors.black, fontSize: 33),),
           const    SizedBox(
-                height: 60,
+                height: 40,
               ),
             Center(
               child: LinearPercentIndicator(
                         // width: 350.0,
                         lineHeight: 18.0,
-                        percent: 0.02,
+                        percent: 0.60,
                         progressColor: Colors.green,
                       ),
             ),
@@ -59,11 +59,10 @@ class _TodayWorkoutPageState extends State<TodayWorkoutPage> {
                 style: TextStyle(color: Colors.black, fontSize: 20,fontWeight: FontWeight.w600,),),
             ),
             const    SizedBox(
-                height: 40,
+                height: 30,
               ),
            const Divider(),
            Card(
-            color: Colors.grey[300],
 child: Padding(
   padding: const EdgeInsets.all(20.0),
   child:   Row(
@@ -104,6 +103,7 @@ child: Padding(
 
           ),
           Card(
+            color: Colors.grey[300],
 child: Padding(
   padding: const EdgeInsets.all(20.0),
   child:   Row(

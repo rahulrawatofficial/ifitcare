@@ -46,12 +46,10 @@ Navigator.pushNamedAndRemoveUntil(context, 'userHome', ModalRoute.withName("/"))
         backgroundColor: Colors.transparent,
         body: Stack(children: [
           Container(
-            padding: const EdgeInsets.only(left: 35, top: 80),
-            // child: const Text(
-            //   "Welcome\nBack",
-            //   style: TextStyle(color: Colors.white, fontSize: 33),
-            // ),
+            padding: const EdgeInsets.only(left: 100, top: 150),
+            child: Image.asset('assets/images/logo.png',height: 200,width: 200,),
           ),
+          
           Form(
             key: _formKey,
             child: SingleChildScrollView(

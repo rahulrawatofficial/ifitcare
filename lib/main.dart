@@ -16,7 +16,19 @@ Future main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(
-    MaterialApp(
+     MyApp(),
+  );
+}
+
+class MyApp extends StatelessWidget {
+  final Future<FirebaseApp> _fbApp = Firebase.initializeApp();
+   MyApp({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
         debugShowCheckedModeBanner: false,
         initialRoute: 'login',
         routes: {
@@ -30,6 +42,6 @@ Future main() async{
           'stepsCount': (context) => const StepCountPage(),
           'waterIntake': (context) => const WaterIntakePage(),
           'userProfile': (context) => const UserProfilePage(),
-        }),
-  );
+        });
+  }
 }
